@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Jaro;
+    src: url(../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf);
+  }
+  #bodyhome{
+      background-image: url(../assets/Images/OptimizacionCopilot3.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: 'Courier New', Courier, monospace;
+      color: black;
+  }
+  #titulo1{
+      color:black;
+      font-size: 60px;
+  }
+  #titulo2 {
+      color:chocolate;
+      font-size:60px;
+  }
+  #titulo3{
+      color:chocolate;
+      font-size: 60px;
+  }
+  #titulo4{
+      color:darkgoldenrod;
+      font-size: 60px;
+  }
+  #Parrafo1{
+      color: grey;
+      font-size: 20;
+      display: block;
+      position: relative;
+      width: 60%;
+      height: 120px;
+      overflow: scroll;
+      background-color:whitesmoke;
+  }
+  #subtitulo1{
+    color: black;
+    font-weight: bold;
+    font-size: 40;
+  }
+  a{
+    color: black;
+    display:inline;
+    margin: auto;
+    background-color:whitesmoke;
+  }
+  #comunidad1{
+    color: blueviolet;
+    padding: 9px;
+    margin-top: 70%;
+    border-top: solid;
+    height: 40%;
+    text-align: center;
+  }
+  #comunidadp{
+    display: block;
+    padding-bottom: 80px;
+    padding-left: 70px;
+    margin-top: 100px;
+    margin-left: 200px;
+  }
