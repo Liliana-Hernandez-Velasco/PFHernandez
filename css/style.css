@@ -85,5 +85,5 @@ ul.list-unstyled > li {
   font-weight: bold;
 }
 .navbar-nav .nav-item.active .nav-link {
-  color: #007bff; /* Azul */
+  color: #007bff;
 }
