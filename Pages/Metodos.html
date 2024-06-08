@@ -3,37 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimizador</title>
+    <title>Métodos de Optimizador</title>
     <link rel="shortcut icon" href="../assets/Images/device-gamepad-3.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body>
-    <div>
-        <h1 id="titulo3" class="Titulos">Métodos de Optimización</h1>
-        <hr>
-        <a href="../index.html">Home</a>
-        <a href="./Variables.html">Variables</a>
-        <a href="./Metodos.html">Metodos</a>
-        <a href="./Optimizador.html">Optimizador</a>
-        <a href="./Comunidad.html">Comunidad</a>
+    <!-- Main Title -->
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="display-4">Optimización y Cadena de Suministro</h1>
+            </div>
+        </div>
     </div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Variables.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Metodos.html">Metodos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Optimizador.html">Optimizador</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Comunidad.html">Comunidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="display-4">Métodos de Optimización</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <a class="btn btn-outline-primary mx-1"> Metodos Heurísticos</a>
+                <a  class="btn btn-outline-primary mx-1">Métodos Exáctos</a>
+                <a class="btn btn-outline-primary mx-1">Métodos Gráficos</a>
+                <a class="btn btn-outline-primary mx-1">Modelos L.P.</a>
+                <a class="btn btn-outline-primary mx-1">No Linealidades</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion" id="metodosAccordion">
+                    <!-- Heurísticos -->
+                    <div class="card">
+                        <div class="card-header" id="headingHeuristicos">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseHeuristicos" aria-expanded="true" aria-controls="collapseHeuristicos">
+                                   Metodos Heurísticos
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseHeuristicos" class="collapse show" aria-labelledby="headingHeuristicos" data-parent="#metodosAccordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>Método 1</li>
+                                    <li>Método 2</li>
+                                    <li>Método 3</li>
+                                    <li>Método 4</li>
+                                    <li>Método 5</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Exactos -->
+                    <div class="card">
+                        <div class="card-header" id="headingExactos">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseExactos" aria-expanded="false" aria-controls="collapseExactos">
+                                    Metodos Exactos
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseExactos" class="collapse" aria-labelledby="headingExactos" data-parent="#metodosAccordion">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>▪ Método 1</li>
+                                    <li>▪ Método 2</li>
+                                    <li>▪ Método 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3">
+            © 2024 Optimizador
+        </div>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
-    <div>
-        <p class="categoria">Heurísticos</p>
-     <ol>
-        <li>Metodo 1</li>
-        <li>Metodo 2</li>
-        <li>Metodo 3</li>
-        <li>Metodo 4</li>
-        <li>Metodo 5</li>
-     </ol>
-     <p class="categoria">Exactos</p>   
-     <ul type="square">
-        <li>Metodo 1</li>
-        <li>Metodo 2</li>
-        <li>Metodo 3</li>
-     </ul>
-    </div>
 </html>
