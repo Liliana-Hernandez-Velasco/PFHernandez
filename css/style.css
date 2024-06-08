@@ -3,10 +3,6 @@
     src: url(../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf);
   }
   #bodyhome{
-      background-image: url(../assets/Images/OptimizacionCopilot3.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
       font-family: 'Courier New', Courier, monospace;
       color: black;
   }
