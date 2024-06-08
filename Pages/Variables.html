@@ -5,40 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables</title>
     <link rel="shortcut icon" href="../assets/Images/device-gamepad-3.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
-    <div>
-        <h1 id="titulo4" class="Titulos">Variables de Optimización</h1>
+<!-- Main Title -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="display-4">Variables de Optimización</h1>
+        </div>
+    </div>
+</div>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Variables.html">Variables</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Metodos.html">Metodos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Optimizador.html">Optimizador</a></li>
+            <li class="nav-item"><a class="nav-link" href="./Comunidad.html">Comunidad</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+
+    <div class="container mt-5">
+        <h1 class="Titulos">Variables de Optimización</h1>
         <hr>
-        <a href="../index.html">Home</a>
-        <a href="./Variables.html">Variables</a>
-        <a href="./Metodos.html">Metodos</a>
-        <a href="./Optimizador.html">Optimizador</a>
-        <a href="./Comunidad.html">Comunidad</a>
+        <div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Procesos
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>Metodo 1</li>
+                                <li>Metodo 2</li>
+                                <li>Metodo 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Logística y Supply Chain
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>Logística
+                                    <ol>
+                                        <li>Vías</li>
+                                        <li>Costos</li>
+                                    </ol>
+                                </li>
+                                <li>Supply Chain
+                                    <ol>
+                                        <li>Mercado</li>
+                                        <li>Compra-Venta</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
-<div>
-    <p class="categoria">Procesos</p>   
-    <ul type="square">
-       <li>Metodo 1</li>
-       <li>Metodo 2</li>
-       <li>Metodo 3</li>
-    </ul>
-    <p class="categoria">Logística y Supply Chain</p>
-    <li>Logística</li>
-    <ol>
-        <li>Vías</li>
-        <li>Costos</li>
-    </ol>
-    <li>Supply Chain</li>
-    <ol>
-        <li>Mercado</li>
-        <li>Compra-Venta</li>
-    </ol>
-   </ol> 
-    </ol>
-   </div>
 </html>
