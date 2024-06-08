@@ -5,80 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="shortcut icon" href="./assets/Images/device-gamepad-3.svg" type="image/x-icon"> 
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="bodyhome" class="body">
-    <div>
-        <h1 id="titulo1" class="Titulos">Optimiación  y Cadena de Suministro</h1>
-        <hr>
-        <a href="/index.html">Home</a>
-        <a href="./Pages/Variables.html">Variables</a>
-        <a href="./Pages/Metodos.html">Metodos</a>
-        <a href="./Pages/Optimizador.html">Optimizador</a>
-        <a href="./Pages/Comunidad.html">Comunidad</a>
-        <div></div>
-    </div>  
-    <div>
-        <p>
-            <h2 id="subtitulo2" class="Subtitulos">About Us</h2>
-            <p id="Parrafo1" class="Parrafos">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
-            </p>
-        </p>
-    </div>
-    <div>
-        <h2 id="subtitulo2" class="Subtitulos">Unit Converter</h2>
-        <form action="./procesar.php" method="post" enctype="text/plain">
-            <label for="type">Type</label>
-            <input type="radio" name="type" id="type" value="volume"> Volume
-            <input type="radio" name="type" id="type" value="weight"> Weight
-            <input type="radio" name="type" id="type" value="weight"> Length
-            <!--Botones-->
-            <input type="submit" name="" id="" value="Convertir">
-            <input type="reset" value="Limpiar Campos">
-        </form>
-        <form action="./procesar.php" method="post" enctype="text/plain">
-            <label for="pais">Initial UOM</label>
-            <select name="initialUOM" id="initialUOM">
-                <option value="Lt">Lt</option>
-                <option value="cm3">cm3</option>
-                <option value="Oz">Oz</option>
-            </select>
-        </form>
-        <form action="./procesar.php" method="post" enctype="text/plain">
-            <label for="value">Value </label>
-            <input
-                type="text"
-                name="value"
-                id="value"
-                placeholder="Value to Convert"
-                >
-        </form>
-        <form action="./procesar.php" method="post" enctype="text/plain">
-            <label for="finalUOM">Final UOM</label>
-            <select name="finalUOM" id="finalUOM">
-                <option value="Lt">Lt</option>
-                <option value="cm3">cm3</option>
-                <option value="Oz">Oz</option>
-            </select>   
-        </form>
-        <form action="./procesar.php" method="post" enctype="text/plain">
-            <label for="conversionresult">Result </label>
-            <input
-                type="text"
-                name="conversionresult"
-                id="conversionresult"
-                placeholder="Result Here"
-                >
-        </form>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Optimiación y Cadena de Suministro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Pages/Variables.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Pages/Metodos.html">Metodos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Pages/Optimizador.html">Optimizador</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Pages/Comunidad.html">Comunidad</a></li>
+            </ul>
         </div>
-        <p>
-            <a href="https://www.instagram.com/avellanedakf/?hl=es" target="_blank">Buen Café Aquí</a>
-        </p>
-        <p>
-            <a href="#footer">Footer</a>
-        </p>
-        <script src="./js/bootstrap.bundle.min.js"></script>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Optimización y Cadena de Suministro</h1>
+                <hr>
+                <h2 class="text-center">About Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2 class="text-center">Unit Converter</h2>
+                <form action="./procesar.php" method="post">
+                    <div class="form-group">
+                        <label for="type">Type</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="type" id="typeVolume" value="volume">
+                            <label class="form-check-label" for="typeVolume">Volume</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="type" id="typeWeight" value="weight">
+                            <label class="form-check-label" for="typeWeight">Weight</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="type" id="typeLength" value="length">
+                            <label class="form-check-label" for="typeLength">Length</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="initialUOM">Initial UOM</label>
+                        <select class="form-control" name="initialUOM" id="initialUOM">
+                            <option value="Lt">Lt</option>
+                            <option value="cm3">cm3</option>
+                            <option value="Oz">Oz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="value">Value</label>
+                        <input type="text" class="form-control" name="value" id="value" placeholder="Value to Convert">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="finalUOM">Final UOM</label>
+                        <select class="form-control" name="finalUOM" id="finalUOM">
+                            <option value="Lt">Lt</option>
+                            <option value="cm3">cm3</option>
+                            <option value="Oz">Oz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conversionresult">Result</label>
+                        <input type="text" class="form-control" name="conversionresult" id="conversionresult" placeholder="Result Here">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Convertir</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar Campos</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <p>
+                    <a href="https://www.instagram.com/avellanedakf/?hl=es" target="_blank" class="btn btn-info">Buen Café Aquí</a>
+                </p>
+                <p>
+                    <a href="#footer" class="btn btn-link">Footer</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5" id="footer">
+        <div class="text-center p-3">
+            © 2024 Optimiación y Cadena de Suministro
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
