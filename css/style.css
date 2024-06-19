@@ -2,10 +2,7 @@
     font-family: Jaro;
     src: url(../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf);
   }
-  #bodyhome{
-      font-family: 'Courier New', Courier, monospace;
-      color: black;
-  }
+
   #titulo1{
       color:black;
       font-size: 60px;
@@ -18,10 +15,7 @@
       color:chocolate;
       font-size: 60px;
   }
-  #titulo4{
-      color:darkgoldenrod;
-      font-size: 60px;
-  }
+  
   #Parrafo1{
       color:darkgreen;
       font-size: 20;
@@ -43,21 +37,7 @@
     margin: auto;
     background-color:whitesmoke;
   }
-  #comunidad1{
-    color: blueviolet;
-    padding: 9px;
-    margin-top: 70%;
-    border-top: solid;
-    height: 40%;
-    text-align: center;
-  }
-  #comunidadp{
-    display: block;
-    padding-bottom: 80px;
-    padding-left: 70px;
-    margin-top: 100px;
-    margin-left: 200px;
-  }
+
 .navbar {
   background-color: #f8f9fa;
 }
@@ -86,4 +66,42 @@ ul.list-unstyled > li {
 }
 .navbar-nav .nav-item.active .nav-link {
   color: #007bff;
+}
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sidebar {
+  min-height: 100vh;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+.sidebar .nav-link {
+  color: #333;
+}
+.sidebar .nav-link.active {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-header {
+  font-weight: bold;
+}
+.nav-item {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .navbar-nav {
+    flex-direction: column;
+  }
 }
