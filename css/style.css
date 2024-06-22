@@ -15,7 +15,7 @@
       color:chocolate;
       font-size: 60px;
   }
-  
+
   #Parrafo1{
       color:darkgreen;
       font-size: 20;
@@ -104,4 +104,23 @@ ul.list-unstyled > li {
   .navbar-nav {
     flex-direction: column;
   }
+}
+.circle-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+  animation: shrink 2s infinite;
+}
+
+@keyframes shrink {
+  0% { width: 200px; height: 200px; }
+  100% { width: 50px; height: 50px; }
 }

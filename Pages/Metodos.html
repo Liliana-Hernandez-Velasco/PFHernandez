@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Métodos de Optimizador</title>
+    <title>Métodos de Optimizador | Optimización y Cadena de Suministro</title>
+    <meta name="description" content="Aprenda sobre métodos de optimización, incluyendo métodos heurísticos, exactos, gráficos, modelos LP y no linealidades en la cadena de suministro.">
+    <meta name="keywords" content="Optimización, Cadena de Suministro, Métodos Heurísticos, Métodos Exactos, Métodos Gráficos, Modelos LP, No Linealidades">
     <link rel="shortcut icon" href="../assets/Images/device-gamepad-3.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<body>
     <!-- Main Title -->
     <div class="container mt-3">
         <div class="row">
@@ -31,19 +34,26 @@
             </ul>
         </div>
     </nav>
-<body>
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1 class="display-4">Métodos de Optimización</h1>
+                <h2 class="display-4">Métodos de Optimización</h2>
                 <hr>
+            </div>
+            <p>Aprenda sobre métodos de optimización aplicados a la cadena de suministro.</p>
+            <!-- Search Bar -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="searchInput" placeholder="Buscar...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="searchContent()">Buscar</button>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center mb-4">
-                <a class="btn btn-outline-primary mx-1"> Metodos Heurísticos</a>
-                <a  class="btn btn-outline-primary mx-1">Métodos Exáctos</a>
+                <a class="btn btn-outline-primary mx-1"> Métodos Heurísticos</a>
+                <a class="btn btn-outline-primary mx-1">Métodos Exactos</a>
                 <a class="btn btn-outline-primary mx-1">Métodos Gráficos</a>
                 <a class="btn btn-outline-primary mx-1">Modelos L.P.</a>
                 <a class="btn btn-outline-primary mx-1">No Linealidades</a>
@@ -52,42 +62,110 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="accordion" id="metodosAccordion">
-                    <!-- Heurísticos -->
+                    <!-- Métodos Gráficos -->
+                    <div class="card">
+                        <div class="card-header" id="headingGraficos">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGraficos" aria-expanded="true" aria-controls="collapseGraficos">
+                                    Métodos Gráficos
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseGraficos" class="collapse" aria-labelledby="headingGraficos" data-parent="#metodosAccordion">
+                            <div class="card-body">
+                                <p>Los métodos gráficos son técnicas utilizadas para resolver problemas de programación lineal con dos variables al graficar las restricciones y la función objetivo.</p>
+                                <ol>
+                                    <li>Graficar cada restricción como una línea en el gráfico.</li>
+                                    <li>Identificar la región factible donde se superponen todas las restricciones.</li>
+                                    <li>Graficar la función objetivo y moverla paralelamente hasta el último punto dentro de la región factible.</li>
+                                    <li>Identificar la solución óptima (ya sea máximo o mínimo).</li>
+                                </ol>
+                                <p><strong>Limitaciones:</strong> Solo aplicable a problemas con dos variables de decisión. No práctico para problemas a gran escala.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Métodos Heurísticos -->
                     <div class="card">
                         <div class="card-header" id="headingHeuristicos">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseHeuristicos" aria-expanded="true" aria-controls="collapseHeuristicos">
-                                   Metodos Heurísticos
+                                    Métodos Heurísticos
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseHeuristicos" class="collapse show" aria-labelledby="headingHeuristicos" data-parent="#metodosAccordion">
+                        <div id="collapseHeuristicos" class="collapse" aria-labelledby="headingHeuristicos" data-parent="#metodosAccordion">
                             <div class="card-body">
-                                <ol>
-                                    <li>Método 1</li>
-                                    <li>Método 2</li>
-                                    <li>Método 3</li>
-                                    <li>Método 4</li>
-                                    <li>Método 5</li>
-                                </ol>
+                                <ul>
+                                    <li><strong>Genetic Algorithms:</strong> Inspirados en el proceso de selección natural, utilizan operaciones como mutación, cruce y selección para evolucionar soluciones.</li>
+                                    <li><strong>Simulated Annealing:</strong> Imita el proceso de recocido en metalurgia, enfriando gradualmente el sistema para alcanzar un estado de mínima energía (solución óptima).</li>
+                                    <li><strong>Tabu Search:</strong> Utiliza estructuras de memoria para evitar ciclos y guiar el proceso de búsqueda, registrando y prohibiendo movimientos a soluciones previamente visitadas.</li>
+                                    <li><strong>Ant Colony Optimization:</strong> Inspirado en el comportamiento de las hormigas al encontrar caminos hacia la comida, utiliza rastros de feromonas para guiar la búsqueda de soluciones óptimas.</li>
+                                    <li><strong>Particle Swarm Optimization:</strong> Simula el comportamiento social de bandadas de aves o cardúmenes de peces, ajustando la posición de cada partícula basada en su propia experiencia y la de sus vecinos.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- Exactos -->
+                    <!-- Modelos LP -->
+                    <div class="card">
+                        <div class="card-header" id="headingLP">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseLP" aria-expanded="true" aria-controls="collapseLP">
+                                    Modelos LP
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseLP" class="collapse" aria-labelledby="headingLP" data-parent="#metodosAccordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li><strong>Objective Function:</strong> Una función lineal que se maximiza o minimiza. Ejemplo: Maximize \( Z = c_1x_1 + c_2x_2 + \ldots + c_nx_n \).</li>
+                                    <li><strong>Constraints:</strong> Inecuaciones o ecuaciones lineales. Ejemplo: \( a_{11}x_1 + a_{12}x_2 \leq b_1 \).</li>
+                                    <li><strong>Decision Variables:</strong> Variables que los tomadores de decisiones decidirán los valores. Ejemplo: \( x_1, x_2, \ldots, x_n \).</li>
+                                    <li><strong>Feasible Region:</strong> El conjunto de todos los puntos posibles que satisfacen todas las restricciones.</li>
+                                    <li><strong>Applications:</strong> Asignación de recursos, programación de producción, problemas de transporte, etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Métodos Exactos -->
                     <div class="card">
                         <div class="card-header" id="headingExactos">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseExactos" aria-expanded="false" aria-controls="collapseExactos">
-                                    Metodos Exactos
+                                    Métodos Exactos
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseExactos" class="collapse" aria-labelledby="headingExactos" data-parent="#metodosAccordion">
                             <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li>▪ Método 1</li>
-                                    <li>▪ Método 2</li>
-                                    <li>▪ Método 3</li>
+                                <ul>
+                                    <li><strong>Branch and Bound:</strong> Divide el problema en subproblemas más pequeños y acota la solución óptima.</li>
+                                    <li><strong>Dynamic Programming:</strong> Resuelve problemas dividiéndolos en subproblemas más simples y almacenando los resultados de estos subproblemas.</li>
+                                    <li><strong>Branch and Cut:</strong> Una mejora del método de Branch and Bound, que agrega cortes (nuevas restricciones) para reducir el espacio de búsqueda.</li>
+                                    <li><strong>Simplex Method:</strong> Un algoritmo para resolver problemas de programación lineal, moviéndose de un vértice al siguiente en la región factible.</li>
+                                    <li><strong>Integer Programming:</strong> Similar a la programación lineal pero con variables que deben tomar valores enteros.</li>
+                                    <li><strong>Dynamic Programming:</strong> Un método exacto para resolver problemas de optimización de múltiples etapas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- No Linealidades -->
+                    <div class="card">
+                        <div class="card-header" id="headingNoLineal">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseNoLineal" aria-expanded="false" aria-controls="collapseNoLineal">
+                                    No Linealidades
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNoLineal" class="collapse" aria-labelledby="headingNoLineal" data-parent="#metodosAccordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li><strong>Gradient Descent:</strong> Se mueve iterativamente hacia el mínimo de una función, requiriendo el cálculo del gradiente (primera derivada).</li>
+                                    <li><strong>Newton’s Method:</strong> Utiliza las primeras y segundas derivadas para encontrar el mínimo de la función, puede converger más rápido que el descenso por gradiente pero requiere cálculos más complejos.</li>
+                                    <li><strong>Sequential Quadratic Programming (SQP):</strong> Resuelve una serie de aproximaciones de programación cuadrática al problema no lineal.</li>
+                                    <li><strong>Genetic Algorithms:</strong> Como se mencionó, también se pueden aplicar a problemas de optimización no lineal.</li>
+                                    <li><strong>Simulated Annealing:</strong> También aplicable a problemas no lineales, utiliza una técnica probabilística para encontrar una buena aproximación del óptimo global.</li>
+                                    <li><strong>Applications:</strong> Modelado de sistemas complejos, diseño de ingeniería, modelado económico, etc.</li>
                                 </ul>
                             </div>
                         </div>
@@ -100,10 +178,11 @@
     <!-- Footer -->
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="text-center p-3">
-            © 2024 Optimizador
+            © 2024 Supply Chain
         </div>
     </footer>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

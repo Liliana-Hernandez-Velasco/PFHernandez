@@ -123,56 +123,117 @@
                   <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab">Process</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="constraints-tab" data-toggle="tab" href="#constraints" role="tab">Constraints</a>
+                  <a class="nav-link" id="Scennarios-tab" data-toggle="tab" href="#Scennarios" role="tab">Scennarios</a>
                 </li>
               </ul>
               <div class="tab-content" id="modelDataTabsContent">
                 <div class="tab-pane fade show active" id="supply-chain" role="tabpanel">
                   <!-- Supply Chain Content Here -->
+                  <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="6" class="text-center">Purchases</th>
+                          </tr>
+                      <tr>
+                        <th>Material</th>
+                        <th>Cost</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>UOM</th>
+                        <th>Infeasibility Breakers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <!-- Additional rows as needed -->
+                      <tr>
+                        <th colspan="6" class="text-center">Sales</th>
+                      </tr>
+                      <tr>
+                        <th>Material</th>
+                        <th>Price</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>UOM</th>
+                        <th>Infeasibility Breakers</th>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <!-- Additional rows as needed -->
+                    </tbody>
+                  </table>
                 </div>
                 <div class="tab-pane fade" id="process" role="tabpanel">
                   <!-- Process Content Here -->
+                  <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="5" class="text-center">Process</th>
+                          </tr>
+                      <tr>
+                        <th>Process ID</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>UOM</th>
+                        <th>Infeasibility Breakers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <!-- Additional rows as needed -->
+                    </tbody>
+                  </table>
                 </div>
-                <div class="tab-pane fade" id="constraints" role="tabpanel">
+                <div class="tab-pane fade" id="Scennarios" role="tabpanel">
                   <!-- Constraints Content Here -->
+                  <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="5" class="text-center">Variables to Change</th>
+                          </tr>
+                      <tr>
+                        <th>Variables</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>UOM</th>
+                        <th>Infeasibility Breakers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <!-- Additional rows as needed -->
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Solver -->
-          <div class="card">
-            <div class="card-header">Solver</div>
-            <div class="card-body">
-              <ul class="nav nav-tabs" id="solverTabs" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="lp-tab" data-toggle="tab" href="#lp" role="tab">LP</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="xslp-tab" data-toggle="tab" href="#xslp" role="tab">XSLP</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="solverTabsContent">
-                <div class="tab-pane fade show active" id="lp" role="tabpanel">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="label1">
-                    <label class="form-check-label" for="label1">Label 1</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="label2">
-                    <label class="form-check-label" for="label2">Label 2</label>
-                  </div>
-                  <button type="button" class="btn btn-primary">Run</button>
-                  <div class="alert alert-success mt-2" role="alert">Success message</div>
-                  <div class="alert alert-danger mt-2" role="alert">Infeasibilities: 12</div>
-                </div>
-                <div class="tab-pane fade" id="xslp" role="tabpanel">
-                  <!-- XSLP Content Here -->
-                </div>
-              </div>
-            </div>
-          </div>
-
+          
           <!-- Results Dashboard -->
           <div class="card">
             <div class="card-header">Results Dashboard</div>
@@ -181,7 +242,7 @@
               <button type="button" class="btn btn-secondary">Export Graphs</button>
             </div>
           </div>
-
+          
           <!-- Solution Report -->
           <div class="card">
             <div class="card-header">Solution Report</div>
@@ -225,8 +286,97 @@
                 </div>
               </div>
             </div>
+            </div>
+          <!-- Solver -->
+<div class="card">
+    <div class="card-header">Solver</div>
+    <div class="card-body">
+      <ul class="nav nav-tabs" id="solverTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="General_Settings-tab" data-toggle="tab" href="#General_Settings" role="tab">General Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="lp-tab" data-toggle="tab" href="#lp" role="tab">LP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="Scenario_Selection-tab" data-toggle="tab" href="#Scenario_Selection" role="tab">Scenario Selection</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="solverTabsContent">
+        <div class="tab-pane fade" id="General_Settings" role="tabpanel">
+          <hr>
+          <label for="SelectCase">General</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
+            <label class="form-check-label" for="generalSettingsCheckbox">General Settings Option 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
+            <label class="form-check-label" for="generalSettingsCheckbox">General Settings Option 2</label>
+          </div>
+          <hr>
+          <label for="SelectCase">Factors</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
+            <label class="form-check-label" for="generalSettingsCheckbox">Factors Option 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
+            <label class="form-check-label" for="generalSettingsCheckbox">Factors Option 2</label>
           </div>
         </div>
+        <div class="tab-pane fade show active" id="lp" role="tabpanel">
+          <hr>
+          <label for="SelectCase">Linear Programming Settings Selection</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="lpOption1">
+            <label class="form-check-label" for="lpOption1">Use Variables Initialization</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="lpOption2">
+            <label class="form-check-label" for="lpOption2">Fix Material Balance</label>
+          </div>
+          <label for="SolverSettings">Solver Settings</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="solverOption1">
+            <label class="form-check-label" for="solverOption1">Use Default Convergence</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="solverOption2">
+            <label class="form-check-label" for="solverOption2">Global Optimization</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="solverOption3">
+            <label class="form-check-label" for="solverOption3">Improve Local Solution</label>
+          </div>
+          <label for="SolverIterations">Solver Iterations</label>
+          <select class="form-control" name="SolverIterations" id="SolverIterations">
+            <option value="1">Automatic Variable Scaling</option>
+            <option value="2">Use Default Convergence Tolerance</option>
+            <option value="3">Use Default Maximum Number Of Iterations</option>
+          </select>
+        </div>
+        <div class="tab-pane fade" id="Scenario_Selection" role="tabpanel">
+          <hr>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="runAllScenarios">
+            <label class="form-check-label" for="runAllScenarios">Run All Scenarios</label>
+          </div>
+          <label for="SelectScenario">Select Scenario</label>
+          <select class="form-control" name="SelectScenario" id="SelectScenario">
+            <option value="1">Scenario 1</option>
+            <option value="2">Scenario 2</option>
+            <option value="3">Scenario 3</option>
+          </select>
+          <hr>
+          <button type="button" class="btn btn-primary">Run</button>
+          <hr>
+          <div class="alert alert-success mt-2" role="alert">Success message</div>
+          <div class="alert alert-danger mt-2" role="alert">Infeasibilities: 12</div>
+        </div>
+      </div>
+    </div>
+  </div>
       </main>
     </div>
   </div>
