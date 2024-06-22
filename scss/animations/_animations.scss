@@ -24,6 +24,14 @@
     animation-iteration-count: infinite;
   }
   
+  #square1 {
+    animation-name: move1;
+  }
+  
+  #square2 {
+    animation-name: move2;
+  }
+    
   .imagen-animada {
     animation-name: appear;
     animation-duration: 3s;
