@@ -1,0 +1,229 @@
+@media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .navbar-nav {
+      flex-direction: column;
+    }
+  }
+// Import fonts
+@font-face {
+    font-family: 'Jaro';
+    src: url('../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf');
+  }
+  
+  // Variables
+  $color-black: black;
+  $color-chocolate: chocolate;
+  $color-darkgreen: darkgreen;
+  $color-whitesmoke: whitesmoke;
+  $color-gray-light: #f8f9fa;
+  $color-blue: #007bff;
+  
+  $font-size-title: 60px;
+  $font-size-subtitle: 40px;
+  $font-size-paragraph: 20px;
+  
+  // Import other SCSS files if needed
+  // @import 'other-styles.scss';
+  #titulo1, #titulo2, #titulo3 {
+    color: $color-black;
+    font-size: $font-size-title;
+  }
+  
+  #titulo2 {
+    color: $color-chocolate;
+  }
+  
+  #Parrafo1 {
+    color: $color-darkgreen;
+    font-size: $font-size-paragraph;
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 120px;
+    overflow: scroll;
+    background-color: $color-whitesmoke;
+  }
+  
+  #subtitulo1 {
+    color: $color-black;
+    font-weight: bold;
+    font-size: $font-size-subtitle;
+  }
+  
+  a {
+    color: $color-black;
+    display: inline;
+    margin: auto;
+    background-color: $color-whitesmoke;
+  }
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid $color-black;
+    animation: shrink 2s infinite;
+  }
+  
+  @keyframes shrink {
+    0% {
+      width: 200px;
+      height: 200px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  .square-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust height as needed */
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    position: absolute;
+    animation-duration: 3s; /* Animation duration */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  #square1 {
+    animation-name: move1;
+  }
+  
+  #square2 {
+    animation-name: move2;
+  }
+  
+  @keyframes move1 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(75px) translateY(0); /* Move towards the center */
+    }
+    100% {
+        transform: translateX(50px) translateY(-50px); /* Move diagonally up */
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+        transform: translateX(100px) translateY(0);
+    }
+    50% {
+        transform: translateX(25px) translateY(0); /* Move towards the center */
+    }
+    100% {
+        transform: translateX(50px) translateY(-50px); /* Move diagonally up */
+    }
+  }
+  
+  .imagen-animada {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .navbar {
+    background-color: #f8f9fa;
+  }
+  
+  .Titulos {
+    color: #333;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border: none;
+  
+    button {
+      color: #333;
+      font-weight: bold;
+    }
+  }
+  
+  .card-body {
+    background-color: #f8f9fa;
+  }
+  
+  ul.list-unstyled {
+    > li {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      color: #333;
+      font-weight: bold;
+  
+      &.active {
+        color: #007bff;
+      }
+    }
+  
+    .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .sidebar {
+    min-height: 100vh;
+    padding-top: 20px;
+    border-right: 1px solid #ccc;
+  
+    .nav-link {
+      color: #333;
+  
+      &.active {
+        font-weight: bold;
+        background-color: #f8f9fa;
+      }
+    }
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  
+    .card-header {
+      font-weight: bold;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+    }
+  }
+  
+  
+        
