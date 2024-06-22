@@ -19,7 +19,7 @@
 </div>
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -34,68 +34,67 @@
 </nav>
 
 <!-- Main Content -->
+<div class="container mt-5">
+    <h1 class="Titulos">Variables de Optimización</h1>
+    <hr>
+    <div>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Procesos
+                        </button>
+                    </h2>
+                </div>
 
-    <div class="container mt-5">
-        <h1 class="Titulos">Variables de Optimización</h1>
-        <hr>
-        <div>
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Procesos
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>Metodo 1</li>
-                                <li>Metodo 2</li>
-                                <li>Metodo 3</li>
-                            </ul>
-                        </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li>Metodo 1</li>
+                            <li>Metodo 2</li>
+                            <li>Metodo 3</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Logística y Supply Chain
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li>Logística
-                                    <ol>
-                                        <li>Vías</li>
-                                        <li>Costos</li>
-                                    </ol>
-                                </li>
-                                <li>Supply Chain
-                                    <ol>
-                                        <li>Mercado</li>
-                                        <li>Compra-Venta</li>
-                                    </ol>
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Logística y Supply Chain
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li>Logística
+                                <ol>
+                                    <li>Vías</li>
+                                    <li>Costos</li>
+                                </ol>
+                            </li>
+                            <li>Supply Chain
+                                <ol>
+                                    <li>Mercado</li>
+                                    <li>Compra-Venta</li>
+                                </ol>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <!-- Footer -->
-        <footer class="bg-light text-center text-lg-start mt-5">
-            <div class="text-center p-3">
-                © 2024 Supply Chain
-            </div>
-        </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>    
+</div>
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="text-center p-3">
+        © 2024 Supply Chain
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
