@@ -124,3 +124,63 @@ ul.list-unstyled > li {
   0% { width: 200px; height: 200px; }
   100% { width: 50px; height: 50px; }
 }
+.square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  position: absolute;
+  animation-duration: 3s; /* Animation duration */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#square1 {
+  animation-name: move1;
+}
+
+#square2 {
+  animation-name: move2;
+}
+
+@keyframes move1 {
+  0% {
+      transform: translateX(0) translateY(0);
+  }
+  50% {
+      transform: translateX(75px) translateY(0); /* Move towards the center */
+  }
+  100% {
+      transform: translateX(50px) translateY(-50px); /* Move diagonally up */
+  }
+}
+
+@keyframes move2 {
+  0% {
+      transform: translateX(100px) translateY(0);
+  }
+  50% {
+      transform: translateX(25px) translateY(0); /* Move towards the center */
+  }
+  100% {
+      transform: translateX(50px) translateY(-50px); /* Move diagonally up */
+  }
+}
+.imagen-animada {
+  animation-name: appear;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
