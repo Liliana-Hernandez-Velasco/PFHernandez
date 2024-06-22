@@ -1,0 +1,19 @@
+.sidebar {
+  min-height: 100vh;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+.sidebar .nav-link {
+  color: #333;
+}
+.sidebar .nav-link.active {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

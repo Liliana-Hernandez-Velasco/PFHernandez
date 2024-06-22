@@ -6,10 +6,6 @@
     flex-direction: column;
   }
 }
-@font-face {
-  font-family: "Jaro";
-  src: url("../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf");
-}
 #titulo1, #titulo2, #titulo3 {
   color: black;
   font-size: 60px;
@@ -198,6 +194,36 @@ ul.list-unstyled > li {
   .navbar-nav {
     flex-direction: column;
   }
+}
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.header {
+  background-color: #cccccc;
+  color: white;
+  padding: 1rem;
+}
+
+.button {
+  background-color: #3c9ec2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #d5e9f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #cccccc;
+  color: white;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

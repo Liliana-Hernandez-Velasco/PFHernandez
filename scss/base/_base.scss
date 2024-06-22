@@ -1,0 +1,13 @@
+// base/_base.scss
+body {
+    background-color: $body-background;
+    color: $text-color;
+  }
+  
+  a {
+    color: $color-black;
+    display: inline;
+    margin: auto;
+    background-color: $color-whitesmoke;
+  }
+  

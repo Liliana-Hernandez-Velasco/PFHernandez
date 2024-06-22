@@ -1,0 +1,175 @@
+@keyframes shrink {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes move1 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(75px) translateY(0);
+  }
+  100% {
+    transform: translateX(50px) translateY(-50px);
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translateX(100px) translateY(0);
+  }
+  50% {
+    transform: translateX(25px) translateY(0);
+  }
+  100% {
+    transform: translateX(50px) translateY(-50px);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Jaro";
+  src: url("../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf");
+}
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+a {
+  color: black;
+  display: inline;
+  margin: auto;
+  background-color: whitesmoke;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+.sidebar .nav-link {
+  color: #333;
+}
+.sidebar .nav-link.active {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+  animation: shrink 2s infinite;
+}
+
+.square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  position: absolute;
+  animation-duration: 3s; /* Animation duration */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.imagen-animada {
+  animation-name: appear;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link {
+  color: #333;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: #007bff;
+}
+.navbar .navbar-nav .nav-item {
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+.card .card-header {
+  background-color: #f8f9fa;
+  border: none;
+}
+.card .card-header button {
+  color: #333;
+  font-weight: bold;
+}
+.card .card-body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+.card .card-header {
+  font-weight: bold;
+}
+
+.button {
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+.sidebar .nav-link {
+  color: #333;
+}
+.sidebar .nav-link.active {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

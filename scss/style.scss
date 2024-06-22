@@ -6,12 +6,6 @@
       flex-direction: column;
     }
   }
-// Import fonts
-@font-face {
-    font-family: 'Jaro';
-    src: url('../assets/Fonts/FontFace/Poppins/Poppins-LightItalic.ttf');
-  }
-  
   // Variables
   $color-black: black;
   $color-chocolate: chocolate;
@@ -23,8 +17,6 @@
   $font-size-title: 60px;
   $font-size-subtitle: 40px;
   $font-size-paragraph: 20px;
-  
-  // Import other SCSS files if needed
   // @import 'other-styles.scss';
   #titulo1, #titulo2, #titulo3 {
     color: $color-black;
@@ -224,6 +216,59 @@
       flex-direction: column;
     }
   }
-  
-  
-        
+  // Define colors
+$light-blue-1: #d5e9f2;
+$light-blue-2: #afd8e6;
+$light-blue-3: #89c6da;
+$light-blue-4: #62b5ce;
+$light-blue-5: #3c9ec2;
+
+$light-gray-1: #f2f2f2;
+$light-gray-2: #e6e6e6;
+$light-gray-3: #d9d9d9;
+$light-gray-4: #cccccc;
+$light-gray-5: #bfbfbf;
+
+// Define body background and text color
+$body-background: $light-gray-1;
+$text-color: #333;
+
+// Define header and footer background colors
+$primary-color: $light-gray-4;
+
+// Define button and card background colors
+$secondary-color: $light-blue-5;
+$card-background: white;
+
+// Define border and shadow color for cards
+$gray: $light-blue-1;
+body {
+  background-color: $body-background;
+  color: $text-color;
+}
+
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.card {
+  background-color: $card-background;
+  border: 1px solid $gray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+}

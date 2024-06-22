@@ -1,0 +1,14 @@
+// main.scss
+@import 'variables/variables';
+@import 'variables/colors';
+@import 'mixins/mixins';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/layout';
+@import 'animations/animations';
+@import 'components/navbar';
+@import 'components/card';
+@import 'components/buttons';
+@import 'components/sidebar';
+// Import other component styles as needed
+

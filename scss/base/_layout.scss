@@ -1,0 +1,22 @@
+// base/_layout.scss
+.container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar {
+    min-height: 100vh;
+    padding-top: 20px;
+    border-right: 1px solid #ccc;
+  
+    .nav-link {
+      color: #333;
+  
+      &.active {
+        font-weight: bold;
+        background-color: #f8f9fa;
+      }
+    }
+  }
+  

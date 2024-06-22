@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #f8f9fa;
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link {
+  color: #333;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: #007bff;
+}
+.navbar .navbar-nav .nav-item {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=navbar.css.map */

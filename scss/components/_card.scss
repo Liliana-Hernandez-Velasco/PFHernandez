@@ -1,0 +1,25 @@
+// components/_card.scss
+.card {
+    margin-bottom: 20px;
+  
+    .card-header {
+      background-color: #f8f9fa;
+      border: none;
+  
+      button {
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  
+    .card-body {
+      background-color: #f8f9fa;
+    }
+  }
+  .card {
+    margin-bottom: 20px;
+  
+    .card-header {
+      font-weight: bold;
+    }
+  }

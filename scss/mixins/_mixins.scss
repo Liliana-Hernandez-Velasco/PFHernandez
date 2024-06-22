@@ -1,0 +1,45 @@
+// mixins/_mixins.scss
+@keyframes shrink {
+    0% {
+      width: 200px;
+      height: 200px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @keyframes move1 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(75px) translateY(0);
+    }
+    100% {
+      transform: translateX(50px) translateY(-50px);
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+      transform: translateX(100px) translateY(0);
+    }
+    50% {
+      transform: translateX(25px) translateY(0);
+    }
+    100% {
+      transform: translateX(50px) translateY(-50px);
+    }
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
