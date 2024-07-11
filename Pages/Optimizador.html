@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Optimizador</title>
+  <meta name="description" content="Aprenda sobre métodos de optimización, incluyendo métodos heurísticos, exactos, gráficos, modelos LP y no linealidades en la cadena de suministro.">
+  <meta name="keywords" content="Optimización, Cadena de Suministro, Métodos Heurísticos, Métodos Exactos, Métodos Gráficos, Modelos LP, No Linealidades">
+  <meta name="author" content="Liliana Hernandez">
   <link rel="shortcut icon" href="../assets/Images/device-gamepad-3.svg" type="image/x-icon">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/main.css">
@@ -33,20 +36,20 @@
       </ul>
     </div>
   </nav>
-  </div>
+
   <script src="../js/bootstrap.bundle.min.js"></script>
   <header>
     <!-- Authentication Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Process Modeling Tool</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav1">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <input type="text" class="form-control" placeholder="Username">
+              <input type="text" class="form-control" placeholder="Username" id="username">
             </li>
             <li class="nav-item">
-              <input type="password" class="form-control" placeholder="Password">
+              <input type="password" class="form-control" placeholder="Password" id="password">
             </li>
           </ul>
         </div>
@@ -106,8 +109,9 @@
               <!-- Diagram Content Here -->
             </div>
           </div>
-
+        </div>
           <!-- Model Data -->
+          <div class="container">
           <div class="card">
             <div class="card-header">Model Data</div>
             <div class="card-body">
@@ -229,8 +233,9 @@
               </div>
             </div>
           </div>
-          
+          </div>
           <!-- Results Dashboard -->
+          <div class="container">
           <div class="card">
             <div class="card-header">Results Dashboard</div>
             <div class="card-body">
@@ -238,8 +243,9 @@
               <button type="button" class="btn btn-secondary">Export Graphs</button>
             </div>
           </div>
-
+          </div>
           <!-- Solution Report -->
+          <div class="container">
           <div class="card">
             <div class="card-header">Solution Report</div>
             <div class="card-body">
@@ -282,9 +288,11 @@
                 </div>
               </div>
             </div>
-            </div>
+          </div>
+          </div>
           <!-- Solver -->
-<div class="card">
+          <div class="container">
+          <div class="card">
     <div class="card-header">Solver</div>
     <div class="card-body">
       <ul class="nav nav-tabs" id="solverTabs" role="tablist">
@@ -301,52 +309,62 @@
       <div class="tab-content" id="solverTabsContent">
         <div class="tab-pane fade" id="General_Settings" role="tabpanel">
           <hr>
-          <label for="SelectCase">General</label>
+          <label for="SelectCase" id="Select_Case">General</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
-            <label class="form-check-label" for="generalSettingsCheckbox">General Settings Option 1</label>
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox1">
+            <label class="form-check-label" for="generalSettingsCheckbox1" id="GeneralS2">General Settings Option 1</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
-            <label class="form-check-label" for="generalSettingsCheckbox">General Settings Option 2</label>
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox2">
+            <label class="form-check-label" for="generalSettingsCheckbox2" id="GeneralS3">General Settings Option 2</label>
           </div>
           <hr>
-          <label for="SelectCase">Factors</label>
+          <label for="SelectCase" id="SelectF1">Factors</label>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
-            <label class="form-check-label" for="generalSettingsCheckbox">Factors Option 1</label>
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox3">
+            <label class="form-check-label" for="generalSettingsCheckbox3" id="SelectF2">Factors Option 1</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox">
-            <label class="form-check-label" for="generalSettingsCheckbox">Factors Option 2</label>
+            <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox4">
+            <label class="form-check-label" for="generalSettingsCheckbox4" id="SelectF3">Factors Option 2</label>
           </div>
         </div>
         <div class="tab-pane fade show active" id="lp" role="tabpanel">
           <hr>
           <label for="SelectCase">Linear Programming Settings Selection</label>
+          <select id="SelectCase" name="SelectCase">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>   
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="lpOption1">
-            <label class="form-check-label" for="lpOption1">Use Variables Initialization</label>
+            <label class="form-check-label" for="lpOption1" id="lpO1">Use Variables Initialization</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="lpOption2">
-            <label class="form-check-label" for="lpOption2">Fix Material Balance</label>
+            <label class="form-check-label" for="lpOption2" id="lpO2">Fix Material Balance</label>
           </div>
           <hr>
           <label for="SolverSettings">Solver Settings</label>
+          <select id="SolverSettings" name="SolverSettings">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select> 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption1">
-            <label class="form-check-label" for="solverOption1">Use Default Convergence</label>
+            <label class="form-check-label" for="solverOption1" id="solverO1">Use Default Convergence</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption2">
-            <label class="form-check-label" for="solverOption2">Global Optimization</label>
+            <label class="form-check-label" for="solverOption2" id="solverO3">Global Optimization</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption3">
-            <label class="form-check-label" for="solverOption3">Improve Local Solution</label>
+            <label class="form-check-label" for="solverOption3" id="sovlerO4">Improve Local Solution</label>
           </div>
-          <label for="SolverIterations">Solver Iterations</label>
+          <label for="SolverIterations" id="SolverInteractions0">Solver Iterations</label>
           <select class="form-control" name="SolverIterations" id="SolverIterations">
             <option value="1">Automatic Variable Scaling</option>
             <option value="2">Use Default Convergence Tolerance</option>
@@ -373,7 +391,8 @@
         </div>
       </div>
     </div>
-  </div>
+          </div>
+          </div>
       </main>
     </div>
   </div>
@@ -381,13 +400,10 @@
   <footer class="mt-4 py-3 bg-light text-center">
     <p>&copy; 2024 Suply Chain</p>
   </footer>
-    </div>
-  </div>
+
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
-
 </body>
 </html>
