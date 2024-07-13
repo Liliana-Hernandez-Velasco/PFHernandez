@@ -113,17 +113,17 @@
           <!-- Model Data -->
           <div class="container">
           <div class="card">
-            <div class="card-header">Model Data</div>
+            <div class="card-header">Datos del Modelo</div>
             <div class="card-body">
               <ul class="nav nav-tabs" id="modelDataTabs" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="supply-chain-tab" data-toggle="tab" href="#supply-chain" role="tab">Supply Chain</a>
+                  <a class="nav-link active" id="supply-chain-tab" data-toggle="tab" href="#supply-chain" role="tab">Cadena de Suministro</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab">Process</a>
+                  <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab">Proceso</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="Scennarios-tab" data-toggle="tab" href="#Scennarios" role="tab">Scennarios</a>
+                  <a class="nav-link" id="Scennarios-tab" data-toggle="tab" href="#Scennarios" role="tab">Escenarios</a>
                 </li>
               </ul>
               <div class="tab-content" id="modelDataTabsContent">
@@ -132,7 +132,7 @@
                   <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th colspan="6" class="text-center">Purchases</th>
+                            <th colspan="6" class="text-center">Compras</th>
                           </tr>
                       <tr>
                         <th>Material</th>
@@ -154,11 +154,11 @@
                       </tr>
                       <!-- Additional rows as needed -->
                       <tr>
-                        <th colspan="6" class="text-center">Sales</th>
+                        <th colspan="6" class="text-center">Ventas</th>
                       </tr>
                       <tr>
                         <th>Material</th>
-                        <th>Price</th>
+                        <th>Precio</th>
                         <th>Min</th>
                         <th>Max</th>
                         <th>UOM</th>
@@ -181,10 +181,10 @@
                   <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th colspan="5" class="text-center">Process</th>
+                            <th colspan="5" class="text-center">Proceso</th>
                           </tr>
                       <tr>
-                        <th>Process ID</th>
+                        <th>ID del Proceso</th>
                         <th>Min</th>
                         <th>Max</th>
                         <th>UOM</th>
@@ -208,7 +208,7 @@
                   <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th colspan="5" class="text-center">Variables to Change</th>
+                            <th colspan="5" class="text-center">Variables</th>
                           </tr>
                       <tr>
                         <th>Variables</th>
@@ -237,30 +237,30 @@
           <!-- Results Dashboard -->
           <div class="container">
           <div class="card">
-            <div class="card-header">Results Dashboard</div>
+            <div class="card-header">Resultados</div>
             <div class="card-body">
               <!-- Graphs and Charts Here -->
-              <button type="button" class="btn btn-secondary">Export Graphs</button>
+              <button type="button" class="btn btn-secondary">Exportar Gráficos</button>
             </div>
           </div>
           </div>
           <!-- Solution Report -->
           <div class="container">
           <div class="card">
-            <div class="card-header">Solution Report</div>
+            <div class="card-header">Reporte de Soluciones</div>
             <div class="card-body">
               <ul class="nav nav-pills" id="solutionReportTabs" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="purchases-tab" data-toggle="tab" href="#purchases" role="tab">Purchases</a>
+                  <a class="nav-link active" id="purchases-tab" data-toggle="tab" href="#purchases" role="tab">Compras</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="sales-tab" data-toggle="tab" href="#sales" role="tab">Sales</a>
+                  <a class="nav-link" id="sales-tab" data-toggle="tab" href="#sales" role="tab">Ventas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="limits-tab" data-toggle="tab" href="#limits" role="tab">Limits</a>
+                  <a class="nav-link" id="limits-tab" data-toggle="tab" href="#limits" role="tab">Limites</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="operation-variables-tab" data-toggle="tab" href="#operation-variables" role="tab">Operation Variables</a>
+                  <a class="nav-link" id="operation-variables-tab" data-toggle="tab" href="#operation-variables" role="tab">Variables de Operación</a>
                 </li>
               </ul>
               <div class="tab-content" id="solutionReportTabsContent">
@@ -282,9 +282,9 @@
                   Export Report
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Solution Report (.pdf)</a>
-                  <a class="dropdown-item" href="#">Solution Report (.xlsx)</a>
-                  <a class="dropdown-item" href="#">Solution Report (.csv)</a>
+                  <a class="dropdown-item" href="#">Reporte Final (.pdf)</a>
+                  <a class="dropdown-item" href="#">Reporte Final (.xlsx)</a>
+                  <a class="dropdown-item" href="#">Report Final (.csv)</a>
                 </div>
               </div>
             </div>
@@ -297,13 +297,13 @@
     <div class="card-body">
       <ul class="nav nav-tabs" id="solverTabs" role="tablist">
         <li class="nav-item">
-          <a class="nav-link" id="General_Settings-tab" data-toggle="tab" href="#General_Settings" role="tab">General Settings</a>
+          <a class="nav-link" id="General_Settings-tab" data-toggle="tab" href="#General_Settings" role="tab">Ajustes Generales</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" id="lp-tab" data-toggle="tab" href="#lp" role="tab">LP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="Scenario_Selection-tab" data-toggle="tab" href="#Scenario_Selection" role="tab">Scenario Selection</a>
+          <a class="nav-link" id="Scenario_Selection-tab" data-toggle="tab" href="#Scenario_Selection" role="tab">Selección de Escenarios</a>
         </li>
       </ul>
       <div class="tab-content" id="solverTabsContent">
@@ -312,82 +312,82 @@
           <label for="SelectCase" id="Select_Case">General</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox1">
-            <label class="form-check-label" for="generalSettingsCheckbox1" id="GeneralS2">General Settings Option 1</label>
+            <label class="form-check-label" for="generalSettingsCheckbox1" id="GeneralS2">Ajustes Generales Opción 1</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox2">
-            <label class="form-check-label" for="generalSettingsCheckbox2" id="GeneralS3">General Settings Option 2</label>
+            <label class="form-check-label" for="generalSettingsCheckbox2" id="GeneralS3">Ajustes Generales Opción 2</label>
           </div>
           <hr>
-          <label for="SelectCase" id="SelectF1">Factors</label>
+          <label for="SelectCase" id="SelectF1">Factores</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox3">
-            <label class="form-check-label" for="generalSettingsCheckbox3" id="SelectF2">Factors Option 1</label>
+            <label class="form-check-label" for="generalSettingsCheckbox3" id="SelectF2">Factores Opción 1</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="generalSettingsCheckbox4">
-            <label class="form-check-label" for="generalSettingsCheckbox4" id="SelectF3">Factors Option 2</label>
+            <label class="form-check-label" for="generalSettingsCheckbox4" id="SelectF3">Factores Opción 2</label>
           </div>
         </div>
         <div class="tab-pane fade show active" id="lp" role="tabpanel">
           <hr>
-          <label for="SelectCase">Linear Programming Settings Selection</label>
+          <label for="SelectCase">Selección de Parámetros LP</label>
           <select id="SelectCase" name="SelectCase">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="option1">Opción 1</option>
+            <option value="option2">Opción 2</option>
+            <option value="option3">Opción 3</option>
           </select>   
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="lpOption1">
-            <label class="form-check-label" for="lpOption1" id="lpO1">Use Variables Initialization</label>
+            <label class="form-check-label" for="lpOption1" id="lpO1">Iniciación de Variables</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="lpOption2">
-            <label class="form-check-label" for="lpOption2" id="lpO2">Fix Material Balance</label>
+            <label class="form-check-label" for="lpOption2" id="lpO2">Fijar Balance de Materia</label>
           </div>
           <hr>
-          <label for="SolverSettings">Solver Settings</label>
+          <label for="SolverSettings">Ajustes de Solver</label>
           <select id="SolverSettings" name="SolverSettings">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="option1">Opción 1</option>
+            <option value="option2">Opción 2</option>
+            <option value="option3">Opción 3</option>
           </select> 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption1">
-            <label class="form-check-label" for="solverOption1" id="solverO1">Use Default Convergence</label>
+            <label class="form-check-label" for="solverOption1" id="solverO1">Valores de Convergencia Predefinidos</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption2">
-            <label class="form-check-label" for="solverOption2" id="solverO3">Global Optimization</label>
+            <label class="form-check-label" for="solverOption2" id="solverO3">Optimización Global</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="solverOption3">
-            <label class="form-check-label" for="solverOption3" id="sovlerO4">Improve Local Solution</label>
+            <label class="form-check-label" for="solverOption3" id="sovlerO4">Opción 3</label>
           </div>
-          <label for="SolverIterations" id="SolverInteractions0">Solver Iterations</label>
+          <label for="SolverIterations" id="SolverInteractions0">Número de Iteraciones</label>
           <select class="form-control" name="SolverIterations" id="SolverIterations">
-            <option value="1">Automatic Variable Scaling</option>
-            <option value="2">Use Default Convergence Tolerance</option>
-            <option value="3">Use Default Maximum Number Of Iterations</option>
+            <option value="1">Escalamiento de Variables Automático</option>
+            <option value="2">Toleracia de Convergence Predefinida</option>
+            <option value="3">Máximo número de Iteraciones Predefinida</option>
           </select>
         </div>
         <div class="tab-pane fade" id="Scenario_Selection" role="tabpanel">
           <hr>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="runAllScenarios">
-            <label class="form-check-label" for="runAllScenarios">Run All Scenarios</label>
+            <label class="form-check-label" for="runAllScenarios">Seleccionar Todos los Escenarios</label>
           </div>
-          <label for="SelectScenario">Select Scenario</label>
+          <label for="SelectScenario">Seleccionar Escenario</label>
           <select class="form-control" name="SelectScenario" id="SelectScenario">
-            <option value="1">Scenario 1</option>
-            <option value="2">Scenario 2</option>
-            <option value="3">Scenario 3</option>
+            <option value="1">Escenario 1</option>
+            <option value="2">Escenario 2</option>
+            <option value="3">Escenario 3</option>
           </select>
           <hr>
-          <button type="button" class="btn btn-primary">Run</button>
+          <button type="button" class="btn btn-primary">Optimizar</button>
           <hr>
-          <div class="alert alert-success mt-2" role="alert">Success message</div>
-          <div class="alert alert-danger mt-2" role="alert">Infeasibilities: 12</div>
+          <div class="alert alert-success mt-2" role="alert">Optimización Exitosa</div>
+          <div class="alert alert-danger mt-2" role="alert">Inviabilidades: 12</div>
         </div>
       </div>
     </div>
