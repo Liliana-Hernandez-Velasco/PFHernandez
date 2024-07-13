@@ -48,75 +48,76 @@
         <div class="row mt-4">
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Unit Converter</div>
+                    <div class="card-header">Convertidor de Unidades</div>
                     <div class="card-body">
                         <form id="unit-converter-form">
                             <div class="form-group">
-                                <label>Type</label><br>
+                                <label>Selecciona La Propiedad de Materia</label><br>
+                                <hr>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="type" id="typeVolume" value="volume">
-                                    <label class="form-check-label" for="typeVolume">Volume</label>
+                                    <label class="form-check-label" for="typeVolume">Volúmen</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="type" id="typeWeight" value="weight">
-                                    <label class="form-check-label" for="typeWeight">Weight</label>
+                                    <label class="form-check-label" for="typeWeight">Peso</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="type" id="typeLength" value="length">
-                                    <label class="form-check-label" for="typeLength">Length</label>
+                                    <label class="form-check-label" for="typeLength">Distancia</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="initialUOM">Initial UOM</label>
+                                <label for="initialUOM">Valor a Convertir</label>
                                 <select class="form-control" name="initialUOM" id="initialUOM">
                                     <!-- Options will be populated dynamically -->
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="value">Value</label>
+                                <label for="value">Valor</label>
                                 <input type="text" class="form-control" name="value" id="value" placeholder="Value to Convert">
                             </div>
 
                             <div class="form-group">
-                                <label for="finalUOM">Final UOM</label>
+                                <label for="finalUOM">Valor Final</label>
                                 <select class="form-control" name="finalUOM" id="finalUOM">
                                     <!-- Options will be populated dynamically -->
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="conversionresult">Result</label>
+                                <label for="conversionresult">Resultado</label>
                                 <input type="text" class="form-control" name="conversionresult" id="conversionresult" placeholder="Result Here" readonly>
                             </div>
                             <hr>
 
-                            <button type="button" class="btn btn-primary" id="convert-btn">Convert</button>
-                            <button type="reset" class="btn btn-secondary">Clear Fields</button>
+                            <button type="button" class="btn btn-primary" id="convert-btn">Convertir</button>
+                            <button type="reset" class="btn btn-secondary">Limpiar valores</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Rock, Paper, Scissors</div>
+                    <div class="card-header">Piedra, Papel, Tijeras</div>
                     <div class="card-body text-center">
                         <div id="rps-game">
-                            <button class="btn btn-primary rps-button" data-choice="rock">Rock</button>
-                            <button class="btn btn-primary rps-button" data-choice="paper">Paper</button>
-                            <button class="btn btn-primary rps-button" data-choice="scissors">Scissors</button>
-                            <button id="clear-results" class="btn btn-danger mt-3">Clear Results</button>
+                            <button class="btn btn-primary rps-button" data-choice="rock">Piedra</button>
+                            <button class="btn btn-primary rps-button" data-choice="paper">Papel</button>
+                            <button class="btn btn-primary rps-button" data-choice="scissors">Tijeras</button>
+                            <button id="clear-results" class="btn btn-danger mt-3">Limpiar Resultados</button>
                         </div>
                         <div id="result" class="mt-3"></div>
-                        <div id="player-score" class="mt-2">Player Score: 0</div>
-                        <div id="computer-score" class="mt-2">Computer Score: 0</div>
+                        <div id="player-score" class="mt-2">Jugador: 0</div>
+                        <div id="computer-score" class="mt-2">Computadora: 0</div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Optimization to Find Solutions</div>
+                    <div class="card-header">Optimizando Para Encontrar Resultados</div>
                     <div class="card-body circle-animation">
                         <div class="circle"></div>
                     </div>
