@@ -123,7 +123,7 @@ function saveInventoryToStorage() {
     localStorage.setItem('inventory', JSON.stringify(inventory));
 }
 function showInventoryJSON() {
-    const inventoryJSON = JSON.stringify(inventory, null, 2); // Formato con indentación de 2 espacios
+    const inventoryJSON = JSON.stringify(inventory, null, 2);
     document.getElementById('jsonOutput').textContent = inventoryJSON;
 }
 function clearInventory() {
