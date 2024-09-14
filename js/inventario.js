@@ -35,6 +35,13 @@
                 inventoryTableBody.appendChild(row);
             });
         }
+        document.getElementById('productPrice').addEventListener('input', (event) => {
+            const price = parseFloat(event.target.value);
+            if (isNaN(price)) {
+                notifyUser('El precio debe ser un número válido.', 'danger');
+            }
+        });
+        
 
         function handleAddProduct() {
             const name = document.getElementById('productName').value;
