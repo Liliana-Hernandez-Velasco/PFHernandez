@@ -17,6 +17,8 @@
   <script src="../js/TablesScript.js"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- SweetAlert CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
   <div class="container mt-3">
@@ -117,154 +119,255 @@
           </div>
         </div>
           <!-- Model Data -->
-            <div class="container">
-              <div class="card">
+          <div class="container my-5">
+            <div class="card">
                 <div class="card-header">Datos del Modelo</div>
                 <div class="card-body">
-                  <ul class="nav nav-tabs" id="modelDataTabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" id="supply-chain-tab" data-toggle="tab" href="#supply-chain" role="tab">Cadena de Suministro</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab">Proceso</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="Scennarios-tab" data-toggle="tab" href="#Scennarios" role="tab">Escenarios</a>
-                    </li>
-                  </ul>
-                  <div class="tab-content" id="modelDataTabsContent">
-                    <div class="tab-pane fade show active" id="supply-chain" role="tabpanel">
-                      <table id="supply-chain-table" class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <th colspan="6" class="text-center">Compras</th>
-                          </tr>
-                          <tr>
-                            <th>Material</th>
-                            <th>Cost</th>
-                            <th>Min</th>
-                            <th>Max</th>
-                            <th>UOM</th>
-                            <th>Infeasibility Breakers</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                      </table>
-                      <form data-table-id="supply-chain-table" onsubmit="updateTable(event)">
-                        <div class="form-group">
-                          <label for="material">Material:</label>
-                          <input type="text" class="form-control" id="material" name="material">
+                    <ul class="nav nav-tabs" id="modelDataTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="supply-chain-tab" data-bs-toggle="tab" href="#supply-chain" role="tab" aria-controls="supply-chain" aria-selected="true">Cadena de Suministro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="process-tab" data-bs-toggle="tab" href="#process" role="tab" aria-controls="process" aria-selected="false">Proceso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="scenarios-tab" data-bs-toggle="tab" href="#scenarios" role="tab" aria-controls="scenarios" aria-selected="false">Escenarios</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="modelDataTabsContent">
+                        <!-- Supply Chain Tab -->
+                        <div class="tab-pane fade show active" id="supply-chain" role="tabpanel" aria-labelledby="supply-chain-tab">
+                            <!-- Compras Section -->
+                            <h5 class="my-3">Compras</h5>
+                            <table id="supply-chain-purchase-table" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Costo</th>
+                                        <th>Min</th>
+                                        <th>Max</th>
+                                        <th>UOM</th>
+                                        <th>Infeasibility Breakers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <form data-table-id="supply-chain-purchase-table" onsubmit="updateTable(event)">
+                                <div class="form-group">
+                                    <label for="purchase-material">Material:</label>
+                                    <input type="text" class="form-control" id="purchase-material" name="material" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-cost">Costo:</label>
+                                    <input type="number" class="form-control" id="purchase-cost" name="cost" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-min">Min:</label>
+                                    <input type="number" class="form-control" id="purchase-min" name="min" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-max">Max:</label>
+                                    <input type="number" class="form-control" id="purchase-max" name="max" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-uom">UOM:</label>
+                                    <input type="text" class="form-control" id="purchase-uom" name="uom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="purchase-breakers">Infeasibility Breakers:</label>
+                                    <input type="text" class="form-control" id="purchase-breakers" name="breakers" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+        
+                            <!-- Ventas Section -->
+                            <h5 class="my-3">Ventas</h5>
+                            <table id="supply-chain-sales-table" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Material</th>
+                                        <th>Precio</th>
+                                        <th>Min</th>
+                                        <th>Max</th>
+                                        <th>UOM</th>
+                                        <th>Infeasibility Breakers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <form data-table-id="supply-chain-sales-table" onsubmit="updateTable(event)">
+                                <div class="form-group">
+                                    <label for="sales-material">Material:</label>
+                                    <input type="text" class="form-control" id="sales-material" name="material" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sales-price">Precio:</label>
+                                    <input type="number" class="form-control" id="sales-price" name="price" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sales-min">Min:</label>
+                                    <input type="number" class="form-control" id="sales-min" name="min" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sales-max">Max:</label>
+                                    <input type="number" class="form-control" id="sales-max" name="max" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sales-uom">UOM:</label>
+                                    <input type="text" class="form-control" id="sales-uom" name="uom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sales-breakers">Infeasibility Breakers:</label>
+                                    <input type="text" class="form-control" id="sales-breakers" name="breakers" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                          <label for="cost">Cost:</label>
-                          <input type="number" class="form-control" id="cost" name="cost">
+        
+                        <!-- Process Tab -->
+                        <div class="tab-pane fade" id="process" role="tabpanel" aria-labelledby="process-tab">
+                            <h5 class="my-3">Proceso</h5>
+                            <table id="process-table" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID del Proceso</th>
+                                        <th>Min</th>
+                                        <th>Max</th>
+                                        <th>UOM</th>
+                                        <th>Infeasibility Breakers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <form data-table-id="process-table" onsubmit="updateTable(event)">
+                                <div class="form-group">
+                                    <label for="process-id">ID del Proceso:</label>
+                                    <input type="text" class="form-control" id="process-id" name="process-id" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="min">Min:</label>
+                                    <input type="number" class="form-control" id="min" name="min" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="max">Max:</label>
+                                    <input type="number" class="form-control" id="max" name="max" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uom">UOM:</label>
+                                    <input type="text" class="form-control" id="uom" name="uom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="breakers">Infeasibility Breakers:</label>
+                                    <input type="text" class="form-control" id="breakers" name="breakers" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                          <label for="min">Min:</label>
-                          <input type="number" class="form-control" id="min" name="min">
+        
+                        <!-- Scenarios Tab -->
+                        <div class="tab-pane fade" id="scenarios" role="tabpanel" aria-labelledby="scenarios-tab">
+                            <h5 class="my-3">Escenarios</h5>
+                            <table id="scenarios-table" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Variables</th>
+                                        <th>Min</th>
+                                        <th>Max</th>
+                                        <th>UOM</th>
+                                        <th>Infeasibility Breakers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <form data-table-id="scenarios-table" onsubmit="updateTable(event)">
+                                <div class="form-group">
+                                    <label for="variable">Variable:</label>
+                                    <input type="text" class="form-control" id="variable" name="variable" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="min">Min:</label>
+                                    <input type="number" class="form-control" id="min" name="min" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="max">Max:</label>
+                                    <input type="number" class="form-control" id="max" name="max" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="uom">UOM:</label>
+                                    <input type="text" class="form-control" id="uom" name="uom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="breakers">Infeasibility Breakers:</label>
+                                    <input type="text" class="form-control" id="breakers" name="breakers" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                          <label for="max">Max:</label>
-                          <input type="number" class="form-control" id="max" name="max">
-                        </div>
-                        <div class="form-group">
-                          <label for="uom">UOM:</label>
-                          <input type="text" class="form-control" id="uom" name="uom">
-                        </div>
-                        <div class="form-group">
-                          <label for="breakers">Infeasibility Breakers:</label>
-                          <input type="text" class="form-control" id="breakers" name="breakers">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
                     </div>
-                    <div class="tab-pane fade" id="process" role="tabpanel">
-                      <table id="process-table" class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <th colspan="5" class="text-center">Proceso</th>
-                          </tr>
-                          <tr>
-                            <th>ID del Proceso</th>
-                            <th>Min</th>
-                            <th>Max</th>
-                            <th>UOM</th>
-                            <th>Infeasibility Breakers</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                      </table>
-                      <form data-table-id="process-table" onsubmit="updateTable(event)">
-                        <div class="form-group">
-                          <label for="process-id">ID del Proceso:</label>
-                          <input type="text" class="form-control" id="process-id" name="process-id">
-                        </div>
-                        <div class="form-group">
-                          <label for="min">Min:</label>
-                          <input type="number" class="form-control" id="min" name="min">
-                        </div>
-                        <div class="form-group">
-                          <label for="max">Max:</label>
-                          <input type="number" class="form-control" id="max" name="max">
-                        </div>
-                        <div class="form-group">
-                          <label for="uom">UOM:</label>
-                          <input type="text" class="form-control" id="uom" name="uom">
-                        </div>
-                        <div class="form-group">
-                          <label for="breakers">Infeasibility Breakers:</label>
-                          <input type="text" class="form-control" id="breakers" name="breakers">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                    </div>
-                    <div class="tab-pane fade" id="Scennarios" role="tabpanel">
-                      <table id="Scennarios-table" class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <th colspan="5" class="text-center">Variables</th>
-                          </tr>
-                          <tr>
-                            <th>Variables</th>
-                            <th>Min</th>
-                            <th>Max</th>
-                            <th>UOM</th>
-                            <th>Infeasibility Breakers</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                      </table>
-                      <form data-table-id="Scennarios-table" onsubmit="updateTable(event)">
-                        <div class="form-group">
-                          <label for="variable">Variable:</label>
-                          <input type="text" class="form-control" id="variable" name="variable">
-                        </div>
-                        <div class="form-group">
-                          <label for="min">Min:</label>
-                          <input type="number" class="form-control" id="min" name="min">
-                        </div>
-                        <div class="form-group">
-                          <label for="max">Max:</label>
-                          <input type="number" class="form-control" id="max" name="max">
-                        </div>
-                        <div class="form-group">
-                          <label for="uom">UOM:</label>
-                          <input type="text" class="form-control" id="uom" name="uom">
-                        </div>
-                        <div class="form-group">
-                          <label for="breakers">Infeasibility Breakers:</label>
-                          <input type="text" class="form-control" id="breakers" name="breakers">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
+        
+            <!-- Botón para limpiar tablas -->
+            <div class="text-center my-3">
+                <button class="btn btn-danger" onclick="clearTables()">Limpiar Tablas</button>
+            </div>
+        </div>
+        
+        <!-- Botones para descargar archivos -->
+        <div class="container my-5">
+            <div class="d-flex flex-wrap justify-content-around">
+                <button class="btn btn-primary btn-sm mb-2" onclick="downloadUserDataJSON()">Descargar JSON de Datos de Usuario</button>
+                <button class="btn btn-info btn-sm mb-2" onclick="downloadPreOptimizationMatrix()">Descargar Matriz Antes de la Optimización</button>
+                <button class="btn btn-warning btn-sm mb-2" onclick="downloadPostOptimizationMatrix()">Descargar Matriz Después de la Optimización</button>
+                <button class="btn btn-success btn-sm mb-2" onclick="downloadOptimizationResultJSON()">Descargar JSON de Resultados del Modelo LP</button>
+            </div>
+        </div>
+        
+        <!-- Resultados, Errores y JSON -->
+        <div class="container my-5">
+            <div class="row">
+                <!-- Resultados -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Resultados de la Optimización</div>
+                        <div class="card-body" id="result">
+                            <!-- Los resultados de la optimización aparecerán aquí -->
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- JSON Generado -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Modelo LP (JSON Generado)</div>
+                        <div class="card-body" id="json-output">
+                            <!-- El JSON generado para la optimización aparecerá aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Sección de Errores -->
+            <div class="card mt-3">
+                <div class="card-header">Errores</div>
+                <div class="card-body" id="error-output">
+                    <!-- Los mensajes de error aparecerán aquí -->
+                </div>
+            </div>
+            <!--Botón para generar Matriz-->
+            <!--Botón para generar Matriz--> 
+            <div class="text-center my-4">
+              <button class="btn btn-success" onclick="handleGenerateMatrixClick()">Generar Matriz de Optimización</button>
+            </div>
+            <!-- Botón de Optimización -->
+            <div class="text-center my-4">
+                <button class="btn btn-success" onclick="optimizeModel()">Optimizar</button>
+            </div>
+        </div>
           <!-- Results Dashboard -->
           <div class="container">
           <div class="card">
@@ -436,5 +539,14 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glpk.js/4.65.0/glpk.min.js"></script>
+  <script src="../js/optimizadorlp1.js"></script>
+  <script src="../js/matrixgen.js"></script>
+  <script src="../js/algoritmolp.js"></script>
+  <!-- SweetAlert JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 </body>
 </html>
